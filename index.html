@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="pinmarklet.js"></script>
+</head>
+
+<body>
+    <p>Photo gallery</p>
+    <ul >
+	    <li style="display: inline;"><img src="https://lh6.ggpht.com/oJ-bWH2rXcm4OozwnAxatnyBMIjbNDGtZtmvvzTgwzz7gYUI4Rm1_U7uUS0Q5xCMOj8=w124" alt="Shape'd image" /></li>
+	    <li style="display: inline;"><img src="https://lh6.ggpht.com/_lTfuXOfXmr6ltzuSnKKMJ7sgTYcxAAsrRZOXUHnm3-ANUTIPvYoEo2De04LV95jDqc=h230" /></li>
+	    <li style="display: inline;"><img src="https://lh6.ggpht.com/cJc0ziefWgLEFzqftXVfwHpsj7xgQYDfuvJAKEGVBS34FA_UVlXieDKTFy-2KxYNAEM=h230" /></li>
+	    <li style="display: inline;"><img src="https://lh5.ggpht.com/PsBg95GrXk3fgywMSYQ01efNDLyQ87vjV4d12Be03975CU5a5VCuC1fDdHxueAIWc-w=h230" /></li>
+    </ul>
+    
+    
+    <p>Having these images usually we will want to just share the first and second images, so we can pass these images to the function</p>
+    <p>On the event onClick when share with Pinterest the image there is a function that print in console</p> 
+    
+	<a id="pinterest" href="#"><img src="images/PinExt.png"></a>
+<script type="text/javascript">
+//map the object to a default img
+$("#pinterest").click(function(){
+	var imgArray = { 
+	        images: [
+		      	{
+					src: "https://lh6.ggpht.com/oJ-bWH2rXcm4OozwnAxatnyBMIjbNDGtZtmvvzTgwzz7gYUI4Rm1_U7uUS0Q5xCMOj8=w124",
+					alt: "Image from Google Images"
+				},
+				{
+					src: "https://lh6.ggpht.com/_lTfuXOfXmr6ltzuSnKKMJ7sgTYcxAAsrRZOXUHnm3-ANUTIPvYoEo2De04LV95jDqc=h230",
+					alt: "Image from Google Images"
+				}
+			]
+	};
+	
+    UTIL.pinterest.addPinMarklet({
+            images : imgArray.images,
+            onPin : function(){
+                console.log("onPin event you can execute whatever you need");
+            }
+    });
+    return false;
+});
+</script>
+</body>
+</html>
