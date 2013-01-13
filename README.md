@@ -14,7 +14,7 @@ The script uses jQuery.
     <a id="pinterest" href="#"><img src="images/PinExt.png"></a>
 
 > The link will be as: 
-    <a id="pinterest" href="#"><img src="images/PinExt.png"></a>
+    <a id="pinterest" href="#"><img src="http://assets.pinterest.com/images/PinExt.png"></a>
     
 
 
