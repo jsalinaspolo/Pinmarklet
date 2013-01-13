@@ -20,7 +20,7 @@ The script uses jQuery.
 
 ### Handle the event on click with jQuery
 
-    <script type="text/javascript">`
+    <script type="text/javascript">
     $("#pinterest").click(function(){
         var imgArray = { 
             images: [
